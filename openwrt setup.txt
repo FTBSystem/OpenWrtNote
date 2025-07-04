@@ -50,7 +50,7 @@ ping trace and nslookup the server you want to test
 --------------------------------------------------------------------------------
 ping success so go update
 
-that ssh in openwrt run update
+than ssh in openwrt run update
 
 win10 cmd command:
 
