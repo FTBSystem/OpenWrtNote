@@ -1,0 +1,5 @@
+mount_root ## this remounts your partitions from read-only to read/write mode
+
+firstboot  ## This will reset your router after reboot
+
+reboot -f ## And force reboot
