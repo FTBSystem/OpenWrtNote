@@ -1,0 +1,26 @@
+opkg update
+
+opkg list-installed *usb*
+
+opkg install kmod-rt2800-usb #WiFi USB driver (ip a will show wlan)
+opkg install kmod-kt2x00-usb #Maybe installed system ?
+
+opkg install kmod-usb-core
+opkg install kmod-usb-ehci
+opkg install kmod-usb-ohci
+opkg install kmod-usb-uhci
+opkg install kmod-usb-xhci-hcd
+opkg install kmod-usb-usb2
+opkg install kmod-usb-usb3
+
+opkg install libusb-1.0-0
+opkg install rt2800-usb-firmware
+opkg install usbutils
+
+
+opkg install hostapd-common #for WiFi AP WPA2
+
+
+Tested:
+#ESP32 connected
+#phone Connected (Play youtube)
