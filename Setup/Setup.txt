@@ -1,0 +1,66 @@
+if you can not ssh login openwrt
+
+do: change your ipv4 192.168.1.1 ip to your local network ipv4
+
+command:
+
+vi /etc/config/network 
+
+(esc)button
+
+:wq!
+
+----------------------------------------------------------------------------
+if your openwrt OS inside a network support DHCP
+
+config interface 'lan'
+	option proto 'dhcp'
+
+Th:is will call openwrt to get IP from you DHCP 
+----------------------------------------------------------------------------
+
+do: set a root password to let you login ssh and http setting page
+
+command:
+
+passwd
+
+----------------------------------------------------------------------------
+
+after (ip) setting reboot
+
+command:
+
+reboot
+
+------------------------------------------------------------------------------
+
+use internet browser to login openwrt and change setting 
+
+link:<openwrt ip>
+
+network >> interfaces 
+
+type in you default gateway and dns (you can use pi hole dns)
+
+network >>Diagnostic
+
+ping trace and nslookup the server you want to test
+
+--------------------------------------------------------------------------------
+ping success so go update
+
+that ssh in openwrt run update
+
+win10 cmd command:
+
+ssh root@<openwrt ip>
+
+opkg update 
+
+---------------------------------------------------------------------------------
+
+basic setup finish
+
+
+
