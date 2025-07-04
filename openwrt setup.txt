@@ -15,56 +15,46 @@ vi /etc/config/network
 :wq!
 
 ----------------------------------------------------------------------------
-if your openwrt OS inside a network support DHCP
+#if your openwrt OS inside a network support DHCP
 
 config interface 'lan'
 	option proto 'dhcp'
 
-Th:is will call openwrt to get IP from you DHCP 
+#This will call openwrt to get IP from your DHCP 
 ----------------------------------------------------------------------------
 
-do: set a root password to let you login ssh and http setting page
-
-command:
-
+#do: set a root password to let you login ssh and http setting page
 passwd
 
 ----------------------------------------------------------------------------
 
-after (ip) setting reboot
+#after (ip) setting reboot
 
-command:
-
-reboot
+#reboot
 
 ------------------------------------------------------------------------------
 
-use internet browser to login openwrt and change setting 
+#use internet browser to login openwrt and change setting 
 
-link:<openwrt ip>
+link:http://<openwrt ip>
 
-network >> interfaces 
+#network >> interfaces 
 
-type in you default gateway and dns (you can use pi hole dns)
+#type in you default gateway and dns (you can use pi hole dns)
 
-network >>Diagnostic
+#network >>Diagnostic
 
-ping trace and nslookup the server you want to test
+#ping trace and nslookup the server you want to test
 
 --------------------------------------------------------------------------------
-ping success so go update
+#ping success so go update
 
-than ssh in openwrt run update
-
-win10 cmd command:
+#than ssh in openwrt run update
 
 ssh root@<openwrt ip>
 
 opkg update 
-
 ---------------------------------------------------------------------------------
-
-basic setup finish
-
+#basic setup finish
 
 
