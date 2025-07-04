@@ -1,8 +1,12 @@
-if you not enable to ssh login openwrt
+#if you not enable to ssh login openwrt
 
-do: change your machine ipv4 192.168.1.1
+#openwrt default ipv4 is 192.168.1.1
 
-command:
+#Set your machine ip to 192.168.1.2
+
+#and try to connect again.
+
+ssh root@192.168.1.1
 
 vi /etc/config/network 
 
